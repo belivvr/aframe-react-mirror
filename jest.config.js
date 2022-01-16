@@ -63,7 +63,8 @@ module.exports = {
     '/__snapshots__/',
 
     'src/index.ts',
-    'src/mirror/',
+    'src/three-class/',
+    'src/aframe-component/',
   ],
   coverageThreshold: {
     global: {

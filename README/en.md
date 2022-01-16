@@ -35,23 +35,30 @@ npm i aframe@1.2.0 @belivvr/aframe-react @belivvr/aframe-react-mirror
 ### React
 
 ```tsx
-import AFRAME from 'aframe';
+import 'aframe';
 import { Scene, Plain } from '@belivvr/aframe-react';
 import {
-  mirror,
-  PlainMirror,
+  registerMirror,
+  Mirror,
 } from '@belivvr/aframe-react-mirror';
 
-mirror(AFRAME); // Doing AFRAME.registerComponent in mirror function.
+registerMirror(); // Doing AFRAME.registerComponent in mirror function.
 
 ReactDOM.render(
   (
     <Scene>
-      <Plain mirror="width: 5; height: 20; position: 0 0 30;">
-      <PlainMirror
+      <Mirror
         width={5}
-        height={20}
+        height={10}
         position={{ x: 0, y: 0, z: 20 }}
+      />
+      // if you want to mirror what is has side of back
+      // using below Mirror component
+      <Mirror
+        width={5}
+        height={10}
+        position={{ x: 0, y: 0, z: 19.999 }}
+        rotation={{ x: 0, y: 180, z: 0 }}
       />
     </Scene>
   ),
@@ -72,8 +79,8 @@ import type { NextPage } from 'next';
 import React, { useEffect, useState } from 'react';
 import { Scene, Plain } from '@belivvr/aframe-react';
 import {
-  mirror,
-  PlainMirror,
+  registerMirror,
+  Mirror,
 } from '@belivvr/aframe-react-mirror';
 
 const Home: NextPage = () => {
@@ -83,8 +90,8 @@ const Home: NextPage = () => {
     setRendered(true);
 
     if (typeof window !== 'undefined') {
-      const AFRAME = require('aframe'); // eslint-disable-line global-require
-      mirror(AFRAME); // Doing AFRAME.registerComponent in stereoscopic function.
+      require('aframe'); // eslint-disable-line global-require
+      registerMirror(); // Doing AFRAME.registerComponent in stereoscopic function.
     }
   }, [mirror, setRendered]);
 
@@ -94,11 +101,18 @@ const Home: NextPage = () => {
 
   return (
     <Scene>
-      <Plain mirror="width: 5; height: 20; position: 0 0 30;">
-      <PlainMirror
+      <Mirror
         width={5}
-        height={20}
+        height={10}
         position={{ x: 0, y: 0, z: 20 }}
+      />
+      // if you want to mirror what is has side of back
+      // using below Mirror component
+      <Mirror
+        width={5}
+        height={10}
+        position={{ x: 0, y: 0, z: 19.999 }}
+        rotation={{ x: 0, y: 180, z: 0 }}
       />
     </Scene>
   );
@@ -110,14 +124,6 @@ export default Home;
 ## Options
 
 ### mirror
-
-|name|description|default|
-|:-|:-|:-|
-|width|mirror width|5|
-|height|mirror height|20|
-|position|mirror position|0 0 20|
-
-### PlainMirror
 
 |name|description|default|
 |:-|:-|:-|
