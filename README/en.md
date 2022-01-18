@@ -16,7 +16,7 @@
 ## Introduce
 
 This library is for using mirror in `aframe@1.2.0`.  
-Get from [Three.js build-in Refractor](https://github.com/mrdoob/three.js/blob/r136/examples/jsm/objects/Refractor.js), and reference from [Reflector example](https://sbcode.net/threejs/reflector/).
+Get from [Three.js build-in Refractor](https://github.com/mrdoob/three.js/blob/r136/examples/jsm/objects/Reflector.js), and reference from [Reflector example](https://sbcode.net/threejs/reflector/).
 
 ## Install
 

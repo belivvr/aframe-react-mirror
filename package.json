@@ -1,6 +1,6 @@
 {
   "name": "@belivvr/aframe-react-mirror",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "React A-Frame mirror(or reflector) component",
   "author": "juunini",
   "license": "MIT",

@@ -16,7 +16,7 @@
 ## Introduce
 
 이 라이브러리는 `aframe@1.2.0` 에서 거울을 사용하기 위해 만들어졌습니다.  
-[Three.js에 내장된 Refractor](https://github.com/mrdoob/three.js/blob/r136/examples/jsm/objects/Refractor.js)를 가져와서 [Reflector 예제 코드](https://sbcode.net/threejs/reflector/) 를 참고하여 컴포넌트를 제작했습니다.
+[Three.js에 내장된 Refractor](https://github.com/mrdoob/three.js/blob/r136/examples/jsm/objects/Reflector.js)를 가져와서 [Reflector 예제 코드](https://sbcode.net/threejs/reflector/) 를 참고하여 컴포넌트를 제작했습니다.
 
 ## Install
 
