@@ -121,10 +121,10 @@ const Home: NextPage = () => {
 export default Home;
 ```
 
-## Options
+## Tags
 
-|name|description|default|
-|:-|:-|:-|
-|width|거울 가로|5|
-|height|거울 세로|20|
-|position|거울 위치|`{ x: 0, y: 0, z: 20 }`|
+|name|description|
+|:-|:-|
+|Mirror|a-plane with mirror|
+|PlaneMirror|a-plane with mirror|
+|MirrorEntity|a-entity tag with mirror|

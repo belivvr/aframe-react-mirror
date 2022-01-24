@@ -1,25 +1,14 @@
 import React from 'react';
-import { Plane } from '@belivvr/aframe-react';
 import type { EntityProps } from '@belivvr/aframe-react/types/core';
+import {
+  Entity,
+  Plane,
+} from '@belivvr/aframe-react';
 
-const POSITION = { x: 0, y: 0, z: 20 };
-
-interface Props {
-  width?: number;
-  height?: number;
+export function MirrorEntity(props: EntityProps): JSX.Element {
+  return <Entity mirror {...props} />;
 }
 
-export default function PlainMirror(props: Props & EntityProps): JSX.Element {
-  const { width, height } = props;
-
-  return (
-    <Plane
-      position={POSITION}
-      mirror={
-        `${width ? `width:${width};` : ''}`
-      + `${height ? `height:${height};` : ''}`
-      }
-      {...{ ...props, width: undefined, height: undefined }}
-    />
-  );
+export function PlaneMirror(props: EntityProps): JSX.Element {
+  return <Plane mirror {...props} />;
 }

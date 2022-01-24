@@ -121,12 +121,10 @@ const Home: NextPage = () => {
 export default Home;
 ```
 
-## Options
+## Tags
 
-### mirror
-
-|name|description|default|
-|:-|:-|:-|
-|width|mirror width|5|
-|height|mirror height|20|
-|position|mirror position|`{ x: 0, y: 0, z: 20 }`|
+|name|description|
+|:-|:-|
+|Mirror|a-plane with mirror|
+|PlaneMirror|a-plane with mirror|
+|MirrorEntity|a-entity tag with mirror|
